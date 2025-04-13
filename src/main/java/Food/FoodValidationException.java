@@ -1,6 +1,8 @@
 package Food;
 
-/**
+public class FoodValidationException extends RuntimeException {
+
+ /**
  * Custom exception class to indicate validation failures for Food entities.
  * Thrown when a Food object fails business logic or data validation checks.
  * Extends RuntimeException to make it an unchecked exception.
