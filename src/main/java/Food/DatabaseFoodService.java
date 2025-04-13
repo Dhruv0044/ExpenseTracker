@@ -12,11 +12,7 @@ import java.util.List;
  */
 @Service
 public class DatabaseFoodService implements FoodService {
-    /**
-     * The repository used to access the database.
-     */
     private final FoodRepository foodRepository;
-
 
     /**
      * Constructs a new DatabaseFoodService with the specified repository.
@@ -27,7 +23,6 @@ public class DatabaseFoodService implements FoodService {
     public DatabaseFoodService(FoodRepository foodRepository) {
         this.foodRepository = foodRepository;
     }
-
 
     /**
      * Creates and persists a new food item after validation.
@@ -44,7 +39,6 @@ public class DatabaseFoodService implements FoodService {
         return foodRepository.save(food);
     }
 
-
     /**
      * Retrieves all food items from the database.
      *
@@ -60,7 +54,6 @@ public class DatabaseFoodService implements FoodService {
         return foodRepository.findAll();
     }
 
-
     /**
      * Retrieves a food item by its unique identifier.
      *
@@ -73,7 +66,6 @@ public class DatabaseFoodService implements FoodService {
         return foodRepository.findById(id).orElseThrow(() -> new FoodNotFoundException("Food with id " + id + " not found"));
     }
 
-
     /**
      * Retrieves a food item by its name.
      *
@@ -85,7 +77,6 @@ public class DatabaseFoodService implements FoodService {
     public Food getFoodByName(String name) {
         return foodRepository.findByName(name).orElseThrow(() -> new FoodNotFoundException("Food with name " + name + " not found"));
     }
-
 
     /**
      * Deletes a food item by its unique identifier.

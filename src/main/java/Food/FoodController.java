@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-
 /**
  * REST controller for handling food-related HTTP requests.
  * Provides endpoints for CRUD operations on food items.
@@ -31,10 +30,10 @@ public class FoodController {
     }
 
     /**
-     * Creates a new food.
+     * Creates a new food item.
      *
-     * @param food The food information to create
-     * @return The created food with HTTP status 201 (created)
+     * @param food the food item to be created
+     * @return ResponseEntity containing the created food and HTTP status 201 (CREATED)
      */
     @PostMapping
     public ResponseEntity<Food> createFood( @RequestBody Food food){

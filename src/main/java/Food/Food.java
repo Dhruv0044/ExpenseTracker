@@ -18,7 +18,6 @@ public class Food {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-
     /**
      * The name of the food item. Cannot be null.
      */

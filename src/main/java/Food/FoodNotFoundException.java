@@ -7,7 +7,6 @@ package Food;
  */
 public class FoodNotFoundException extends RuntimeException {
 
-
     /**
      * Constructs a new FoodNotFoundException with the specified error message.
      *
